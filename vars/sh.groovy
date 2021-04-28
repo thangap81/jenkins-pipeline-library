@@ -6,7 +6,7 @@ def call(String cmd = "ls") {
     def error     = new StringBuilder()
 
     def comando = cmd.execute() //(2)
-    comando.consumeProcessOutput(resultado, error) //(3)
+    comando.consumeProcessOutput(result, error) //(3)
     comando.waitForOrKill(1000) //(4)
 
     if (!error.toString().equals("")) //(5)
